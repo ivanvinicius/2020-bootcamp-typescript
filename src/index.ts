@@ -1,9 +1,11 @@
+/** Importação da funcionalidades do express no arquivo index*/
 import express from 'express';
+
+import helloWorld from './routes';
 
 const app = express();
 
-app.use(express.json());
-
-app.get('/', (request, response) =>  response.send('hello world!'));
+/** arquivo externo que faz a utilização das funcionalidades do express */
+app.get('/', helloWorld);
 
 app.listen(3333);
